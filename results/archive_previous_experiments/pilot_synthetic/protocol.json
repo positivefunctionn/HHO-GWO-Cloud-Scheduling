@@ -1,0 +1,54 @@
+{
+  "benchmark_type": "synthetic scheduling benchmark; not Bitbrains performance",
+  "task_counts": [
+    20
+  ],
+  "load_levels": {
+    "low": 0.35
+  },
+  "seeds": [
+    1001,
+    1002
+  ],
+  "algorithms": [
+    "BFD",
+    "GWO",
+    "HHO",
+    "HHO-GWO",
+    "PSO",
+    "GA"
+  ],
+  "evaluation_budget": 300,
+  "objective": "equal-weight normalized energy + SLA violation rate + makespan",
+  "weights": {
+    "energy": 0.3333333333333333,
+    "sla": 0.3333333333333333,
+    "makespan": 0.3333333333333333
+  },
+  "normalization_references": {
+    "energy": 410.0,
+    "sla": 1.0,
+    "makespan": 10.0
+  },
+  "host_model": [
+    {
+      "host_id": "host_1",
+      "cpu_capacity": 200.0,
+      "idle_power": 100.0,
+      "max_power": 220.0
+    },
+    {
+      "host_id": "host_2",
+      "cpu_capacity": 200.0,
+      "idle_power": 80.0,
+      "max_power": 190.0
+    }
+  ],
+  "vm_initial_state": "all VMs and hosts start empty",
+  "demand_model": "predicted demand drawn to target offered-load ratio; actual demand is predicted demand multiplied by N(1, 0.08), clipped at zero",
+  "limitations": [
+    "synthetic workload only",
+    "power parameters are declared simulation assumptions",
+    "not a CloudSim validation"
+  ]
+}

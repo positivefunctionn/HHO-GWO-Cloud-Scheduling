@@ -1,0 +1,9 @@
+Input validation report
+row_count: 1094
+errors: []
+valid: True
+schema: person1_bilstm_handoff
+risk_score_source: binary predicted_overload fallback (not a calibrated probability)
+input_columns: ['actual_cpu', 'bilstm_predicted_cpu', 'bilstm_predicted_overload', 'persistence_predicted_cpu', 'persistence_predicted_overload', 'timestamp_ms']
+overload_threshold: 80.0
+note: timestamp_ms values in the supplied file look like Unix seconds; original column name/value preserved.

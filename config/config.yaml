@@ -1,0 +1,31 @@
+input_file: data/person2_scheduler_input.csv
+overload_threshold: 80.0
+horizon_length: 10
+evaluation_budget: 300  # maximum objective evaluations per algorithm, horizon, and seed
+tau: 0.18
+scheduling_interval: 1.0
+allowable_utilization: 0.80
+safe_utilization: 0.65
+risk_penalty: 2.0
+execution_sla: 1.5
+weights: {energy: 0.25, makespan: 0.25, sla: 0.25, imbalance: 0.25}
+normalization_references: {energy: 1000.0, makespan: 10.0, sla: 1.0, imbalance: 1.0}
+hho: {population_size: 16, iterations: 30, elite_size: 6}
+gwo: {population_size: 16, iterations: 30}
+trials: 10
+seeds: [11, 23, 37, 41, 53, 67, 71, 83, 97, 101]
+# All VMs below are experimental simulation parameters. capacity is CPU units per interval.
+vms:
+  - {vm_id: vm_1, host_id: host_1, cpu_capacity: 100.0, current_cpu_load: 20.0, idle_power: 80.0, max_power: 160.0}
+  - {vm_id: vm_2, host_id: host_1, cpu_capacity: 120.0, current_cpu_load: 15.0, idle_power: 90.0, max_power: 180.0}
+  - {vm_id: vm_3, host_id: host_2, cpu_capacity: 90.0, current_cpu_load: 25.0, idle_power: 70.0, max_power: 145.0}
+  - {vm_id: vm_4, host_id: host_2, cpu_capacity: 110.0, current_cpu_load: 10.0, idle_power: 85.0, max_power: 170.0}
+
+pso: {population_size: 16, iterations: 30, inertia: 0.7, cognitive: 1.4, social: 1.4}
+ga: {population_size: 16, iterations: 30, elite_count: 2, crossover_rate: 0.8, mutation_rate: 0.08}
+
+# Tuned HHO-GWO budget split for the expanded synthetic benchmark.
+hybrid_budget: {hho_fraction: 0.05, gwo_fraction: 0.05}  # remaining 90% for refinement
+
+# Host-level convex power proxy used by the synthetic three-term objective.
+host_power_curve_exponent: 2.0  # alpha > 1 is convex; alpha = 1 is linear

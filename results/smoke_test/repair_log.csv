@@ -1,0 +1,10 @@
+task_id,horizon_id,original_predicted_cpu,repaired_predicted_cpu,reason
+3600008,36,-0.70565754,0.0,negative prediction retained in source; derived demand floored to zero
+3600009,36,-0.6169435,0.0,negative prediction retained in source; derived demand floored to zero
+3700000,37,-0.13184854,0.0,negative prediction retained in source; derived demand floored to zero
+10000004,100,-0.070641905,0.0,negative prediction retained in source; derived demand floored to zero
+10000005,100,-0.046483085,0.0,negative prediction retained in source; derived demand floored to zero
+10400004,104,-0.3317237,0.0,negative prediction retained in source; derived demand floored to zero
+10400005,104,-1.1408733,0.0,negative prediction retained in source; derived demand floored to zero
+10400006,104,-0.72742665,0.0,negative prediction retained in source; derived demand floored to zero
+10400007,104,-0.23990078,0.0,negative prediction retained in source; derived demand floored to zero

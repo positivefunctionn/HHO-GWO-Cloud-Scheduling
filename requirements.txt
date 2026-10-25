@@ -1,0 +1,8 @@
+numpy>=1.24
+PyYAML>=6.0
+matplotlib>=3.7
+
+# Optional statistical analysis dependency
+scipy>=1.11
+
+pytest>=7.0

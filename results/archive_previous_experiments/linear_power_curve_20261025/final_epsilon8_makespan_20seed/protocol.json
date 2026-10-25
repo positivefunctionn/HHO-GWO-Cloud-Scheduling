@@ -1,0 +1,67 @@
+{
+  "benchmark_type": "synthetic cloud scheduling benchmark; not CloudSim or production trace validation",
+  "task_counts": [
+    20,
+    50,
+    100
+  ],
+  "load_levels": {
+    "low": 0.35,
+    "moderate": 0.65,
+    "high": 0.95
+  },
+  "vm_count": 12,
+  "vms_per_host": 2,
+  "host_count": 6,
+  "algorithms": [
+    "ACO",
+    "WOA",
+    "ABC",
+    "GWO",
+    "GA",
+    "HHO",
+    "HHO-GWO"
+  ],
+  "seed_ids": [
+    9601,
+    9602,
+    9603,
+    9604,
+    9605,
+    9606,
+    9607,
+    9608,
+    9609,
+    9610,
+    9701,
+    9702,
+    9703,
+    9704,
+    9705,
+    9706,
+    9707,
+    9708,
+    9709,
+    9710
+  ],
+  "seed_count": 20,
+  "scenario_count": 9,
+  "algorithm_runs": 1260,
+  "runs_per_algorithm": 180,
+  "evaluation_budget_per_metaheuristic_run": 300,
+  "hybrid_budget_fractions": {
+    "hho": 0.05,
+    "gwo": 0.05,
+    "local_refinement": 0.9
+  },
+  "hybrid_selection": "epsilon-constraint: among candidates within 8% of the best predicted composite fitness, select the lowest predicted makespan",
+  "objective_profile": "balanced; shared scoring formula and normalization references across algorithms",
+  "host_power_model": "declared synthetic assumptions; not measured real energy",
+  "limitations": [
+    "Synthetic workload only; no real trace or CloudSim validation.",
+    "The HHO-GWO uses a declared epsilon-constraint selection rule for the makespan trade-off; this is a different search-selection policy from single-objective baselines.",
+    "Mean makespan is lower than ACO on the holdout set, but paired Wilcoxon test is not statistically significant after Holm correction.",
+    "HHO-GWO does not rank first in energy or SLA violation rate."
+  ],
+  "selection_parameters_selected_on": "separate development/screening seeds; reported validation seeds are 9601-9610 and 9701-9710"
+}

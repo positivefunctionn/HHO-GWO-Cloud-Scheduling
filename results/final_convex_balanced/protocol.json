@@ -1,0 +1,223 @@
+{
+  "benchmark_type": "synthetic scheduling benchmark; not Bitbrains performance",
+  "task_counts": [
+    20,
+    50,
+    100
+  ],
+  "load_levels": {
+    "low": 0.35,
+    "moderate": 0.65,
+    "high": 0.95
+  },
+  "vm_count": 12,
+  "vms_per_host": 2,
+  "objective_profile": "balanced",
+  "host_count": 6,
+  "vm_specs": [
+    {
+      "vm_id": "vm_1",
+      "host_id": "host_1",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_2",
+      "host_id": "host_1",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_3",
+      "host_id": "host_2",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_4",
+      "host_id": "host_2",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_5",
+      "host_id": "host_3",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_6",
+      "host_id": "host_3",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_7",
+      "host_id": "host_4",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_8",
+      "host_id": "host_4",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_9",
+      "host_id": "host_5",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_10",
+      "host_id": "host_5",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_11",
+      "host_id": "host_6",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_12",
+      "host_id": "host_6",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    }
+  ],
+  "seeds": [
+    9601,
+    9602,
+    9603,
+    9604,
+    9605,
+    9606,
+    9607,
+    9608,
+    9609,
+    9610,
+    9701,
+    9702,
+    9703,
+    9704,
+    9705,
+    9706,
+    9707,
+    9708,
+    9709,
+    9710
+  ],
+  "algorithms": [
+    "ACO",
+    "WOA",
+    "ABC",
+    "GWO",
+    "GA",
+    "HHO",
+    "HHO-GWO"
+  ],
+  "hybrid_budget_fractions": {
+    "hho": 0.05,
+    "gwo": 0.05,
+    "local_refinement": 0.8999999999999999
+  },
+  "hybrid_selection_policy": "balanced epsilon-constraint: among candidates no more than 8% worse than the best observed composite fitness, select the lowest makespan, then fitness; this policy is specific to HHO-GWO and must be disclosed as a comparator asymmetry",
+  "evaluation_budget": 300,
+  "objective": "balanced profile using shared weights for all algorithms",
+  "host_power_curve_exponent": 2.0,
+  "host_power_formula": "P(u)=0 for inactive hosts; otherwise P_idle+(P_max-P_idle)*u**alpha, where u is aggregate host utilization clipped to [0,1] and alpha is host_power_curve_exponent",
+  "weights": {
+    "energy": 0.3333333333333333,
+    "sla": 0.3333333333333333,
+    "makespan": 0.3333333333333333
+  },
+  "normalization_references": {
+    "energy": 1105.0,
+    "sla": 1.0,
+    "makespan": 10.0
+  },
+  "metric_units_and_interpretation": {
+    "energy": "synthetic host-power proxy units per scheduling interval; not measured joules or watts",
+    "sla": "fraction of tasks violating declared synthetic SLA rules",
+    "makespan": "normalized aggregate completion metric used by this simulator"
+  },
+  "host_model": [
+    {
+      "host_id": "host_1",
+      "cpu_capacity": 200.0,
+      "idle_power": 80.0,
+      "max_power": 180.0
+    },
+    {
+      "host_id": "host_2",
+      "cpu_capacity": 200.0,
+      "idle_power": 90.0,
+      "max_power": 200.0
+    },
+    {
+      "host_id": "host_3",
+      "cpu_capacity": 200.0,
+      "idle_power": 70.0,
+      "max_power": 165.0
+    },
+    {
+      "host_id": "host_4",
+      "cpu_capacity": 200.0,
+      "idle_power": 85.0,
+      "max_power": 190.0
+    },
+    {
+      "host_id": "host_5",
+      "cpu_capacity": 200.0,
+      "idle_power": 75.0,
+      "max_power": 175.0
+    },
+    {
+      "host_id": "host_6",
+      "cpu_capacity": 200.0,
+      "idle_power": 88.0,
+      "max_power": 195.0
+    }
+  ],
+  "vm_initial_state": "all VMs and hosts start empty",
+  "demand_model": "predicted demand drawn to target offered-load ratio; actual demand is predicted demand multiplied by N(1, 0.08), clipped at zero",
+  "limitations": [
+    "synthetic workload only",
+    "power parameters are declared simulation assumptions",
+    "not a CloudSim validation"
+  ],
+  "seed_count": 20,
+  "algorithm_runs": 1260,
+  "runs_per_algorithm": 180,
+  "merged_from_batches": [
+    "results/final_convex_balanced/batches/seed_batch_9601",
+    "results/final_convex_balanced/batches/seed_batch_9701"
+  ]
+}

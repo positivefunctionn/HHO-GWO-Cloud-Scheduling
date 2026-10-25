@@ -1,0 +1,49 @@
+metric,metric_label,hybrid,competitor,hybrid_minus_competitor_mean,hybrid_better_seed_count,hybrid_worse_seed_count,paired_seeds,wilcoxon_statistic,p_value_two_sided,p_value_holm_within_metric,significant_at_0_05_after_holm
+realized_fitness,Composite fitness,HHO-GWO,ABC,-0.015253511328532015,9,1,10,3.0,0.009765625,0.048828125,True
+realized_fitness,Composite fitness,HHO-GWO,ACO,-0.02822067103783754,10,0,10,0.0,0.001953125,0.0234375,True
+realized_fitness,Composite fitness,HHO-GWO,BFD,-0.054010080350675005,10,0,10,0.0,0.001953125,0.0234375,True
+realized_fitness,Composite fitness,HHO-GWO,DE,-0.0169176010317305,8,2,10,3.0,0.009765625,0.048828125,True
+realized_fitness,Composite fitness,HHO-GWO,FCFS,-0.021247554347312708,9,1,10,2.0,0.005859375,0.046875,True
+realized_fitness,Composite fitness,HHO-GWO,GA,-0.028819893231213128,10,0,10,0.0,0.001953125,0.0234375,True
+realized_fitness,Composite fitness,HHO-GWO,GWO,-0.01861438133993775,8,2,10,4.0,0.013671875,0.048828125,True
+realized_fitness,Composite fitness,HHO-GWO,HHO,-0.017137572226706504,8,2,10,4.0,0.013671875,0.048828125,True
+realized_fitness,Composite fitness,HHO-GWO,NSGA-II,-0.017401698771442438,9,1,10,2.0,0.005859375,0.046875,True
+realized_fitness,Composite fitness,HHO-GWO,Round Robin,-0.021303122637864595,9,1,10,3.0,0.009765625,0.048828125,True
+realized_fitness,Composite fitness,HHO-GWO,SA,-0.024727913799641316,10,0,10,0.0,0.001953125,0.0234375,True
+realized_fitness,Composite fitness,HHO-GWO,WOA,-0.01715867648532393,9,1,10,2.0,0.005859375,0.046875,True
+realized_energy,Energy,HHO-GWO,ABC,0.3780717480855628,4,6,10,27.0,1.0,1.0,False
+realized_energy,Energy,HHO-GWO,ACO,-17.055232625122436,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,BFD,-26.58308995441529,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,DE,0.8682748217624976,4,6,10,27.0,1.0,1.0,False
+realized_energy,Energy,HHO-GWO,FCFS,-125.77153860414307,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,GA,-87.91874222135046,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,GWO,-79.1980886137993,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,HHO,-39.0353793513152,9,1,10,4.0,0.013671875,0.0546875,False
+realized_energy,Energy,HHO-GWO,NSGA-II,1.7994447108704095,5,5,10,20.0,0.4921875,1.0,False
+realized_energy,Energy,HHO-GWO,Round Robin,-119.35002378690794,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,SA,-18.10390079344709,10,0,10,0.0,0.001953125,0.0234375,True
+realized_energy,Energy,HHO-GWO,WOA,24.07204597824658,2,8,10,3.0,0.009765625,0.048828125,True
+realized_sla_rate,SLA violation rate,HHO-GWO,ABC,-0.05033333333333332,9,1,10,2.0,0.005859375,0.041015625,True
+realized_sla_rate,SLA violation rate,HHO-GWO,ACO,-0.08533333333333334,10,0,10,0.0,0.001953125,0.0234375,True
+realized_sla_rate,SLA violation rate,HHO-GWO,BFD,-0.1658888888888889,10,0,10,0.0,0.001953125,0.0234375,True
+realized_sla_rate,SLA violation rate,HHO-GWO,DE,-0.05077777777777779,8,1,10,1.0,0.0078125,0.046875,True
+realized_sla_rate,SLA violation rate,HHO-GWO,FCFS,0.010888888888888892,5,5,10,23.0,0.6953125,1.0,False
+realized_sla_rate,SLA violation rate,HHO-GWO,GA,0.006222222222222212,5,5,10,22.0,0.625,1.0,False
+realized_sla_rate,SLA violation rate,HHO-GWO,GWO,0.027666666666666662,4,6,10,12.0,0.130859375,0.654296875,False
+realized_sla_rate,SLA violation rate,HHO-GWO,HHO,0.008111111111111097,4,6,10,24.0,0.751953125,1.0,False
+realized_sla_rate,SLA violation rate,HHO-GWO,NSGA-II,-0.054555555555555565,9,1,10,1.0,0.00390625,0.03515625,True
+realized_sla_rate,SLA violation rate,HHO-GWO,Round Robin,0.013111111111111106,5,5,10,21.5,0.57421875,1.0,False
+realized_sla_rate,SLA violation rate,HHO-GWO,SA,-0.07466666666666669,10,0,10,0.0,0.001953125,0.0234375,True
+realized_sla_rate,SLA violation rate,HHO-GWO,WOA,-0.05544444444444445,9,1,10,1.0,0.00390625,0.03515625,True
+realized_makespan,Makespan,HHO-GWO,ABC,0.042306529693792984,2,8,10,11.0,0.10546875,0.31640625,False
+realized_makespan,Makespan,HHO-GWO,ACO,0.16105919880564973,0,10,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,BFD,0.2791574281823513,0,10,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,DE,-0.0076079438688209326,4,6,10,26.0,0.921875,1.0,False
+realized_makespan,Makespan,HHO-GWO,FCFS,0.3918884499599927,0,10,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,GA,-0.13117429317354398,10,0,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,GWO,-0.11837332302951128,10,0,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,HHO,-0.24197692631669354,10,0,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,NSGA-II,0.007220024893092636,5,5,10,25.0,0.845703125,1.0,False
+realized_makespan,Makespan,HHO-GWO,Round Robin,0.3098859227566427,0,10,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,SA,0.16866545895296664,0,10,10,0.0,0.001953125,0.0234375,True
+realized_makespan,Makespan,HHO-GWO,WOA,-0.17816242005415706,8,2,10,3.0,0.009765625,0.0390625,True

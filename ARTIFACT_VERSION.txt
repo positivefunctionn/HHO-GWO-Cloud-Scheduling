@@ -1,0 +1,7 @@
+HHO-GWO Cloud Scheduling Research Artifact
+Release: 1.0.0-convex-power
+Release date: 2026-10-25
+Final power curve exponent: 2.0
+Current benchmark profiles: balanced (1260 runs), SLA-focused (1260 runs)
+Build verification: Python 3.13.5; 12/12 unit tests passed; smoke test completed
+See README.md, START_HERE.md, and docs/REPRODUCIBILITY_AUDIT.md.

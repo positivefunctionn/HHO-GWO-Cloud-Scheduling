@@ -1,0 +1,215 @@
+{
+  "benchmark_type": "synthetic scheduling benchmark; not Bitbrains performance",
+  "task_counts": [
+    20,
+    50,
+    100
+  ],
+  "load_levels": {
+    "low": 0.35,
+    "moderate": 0.65,
+    "high": 0.95
+  },
+  "vm_count": 12,
+  "vms_per_host": 2,
+  "objective_profile": "balanced",
+  "host_count": 6,
+  "vm_specs": [
+    {
+      "vm_id": "vm_1",
+      "host_id": "host_1",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_2",
+      "host_id": "host_1",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_3",
+      "host_id": "host_2",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_4",
+      "host_id": "host_2",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_5",
+      "host_id": "host_3",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_6",
+      "host_id": "host_3",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_7",
+      "host_id": "host_4",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_8",
+      "host_id": "host_4",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_9",
+      "host_id": "host_5",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_10",
+      "host_id": "host_5",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_11",
+      "host_id": "host_6",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    },
+    {
+      "vm_id": "vm_12",
+      "host_id": "host_6",
+      "cpu_capacity": 100.0,
+      "current_cpu_load": 0.0,
+      "idle_power": 0.0,
+      "max_power": 0.0
+    }
+  ],
+  "seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005,
+    6006,
+    6007,
+    6008,
+    6009,
+    6010,
+    6011,
+    6012,
+    6013,
+    6014,
+    6015,
+    6016,
+    6017,
+    6018,
+    6019,
+    6020,
+    6021,
+    6022,
+    6023,
+    6024,
+    6025,
+    6026,
+    6027,
+    6028,
+    6029,
+    6030
+  ],
+  "algorithms": [
+    "DE",
+    "WOA",
+    "ABC",
+    "NSGA-II"
+  ],
+  "hybrid_budget_fractions": {
+    "hho": 0.1,
+    "gwo": 0.25,
+    "local_refinement": 0.65
+  },
+  "evaluation_budget": 300,
+  "objective": "balanced profile using shared weights for all algorithms",
+  "weights": {
+    "energy": 0.3333333333333333,
+    "sla": 0.3333333333333333,
+    "makespan": 0.3333333333333333
+  },
+  "normalization_references": {
+    "energy": 1105.0,
+    "sla": 1.0,
+    "makespan": 10.0
+  },
+  "host_model": [
+    {
+      "host_id": "host_1",
+      "cpu_capacity": 200.0,
+      "idle_power": 80.0,
+      "max_power": 180.0
+    },
+    {
+      "host_id": "host_2",
+      "cpu_capacity": 200.0,
+      "idle_power": 90.0,
+      "max_power": 200.0
+    },
+    {
+      "host_id": "host_3",
+      "cpu_capacity": 200.0,
+      "idle_power": 70.0,
+      "max_power": 165.0
+    },
+    {
+      "host_id": "host_4",
+      "cpu_capacity": 200.0,
+      "idle_power": 85.0,
+      "max_power": 190.0
+    },
+    {
+      "host_id": "host_5",
+      "cpu_capacity": 200.0,
+      "idle_power": 75.0,
+      "max_power": 175.0
+    },
+    {
+      "host_id": "host_6",
+      "cpu_capacity": 200.0,
+      "idle_power": 88.0,
+      "max_power": 195.0
+    }
+  ],
+  "vm_initial_state": "all VMs and hosts start empty",
+  "demand_model": "predicted demand drawn to target offered-load ratio; actual demand is predicted demand multiplied by N(1, 0.08), clipped at zero",
+  "limitations": [
+    "synthetic workload only",
+    "power parameters are declared simulation assumptions",
+    "not a CloudSim validation"
+  ]
+}

@@ -1,0 +1,9 @@
+# Experimental methodology and caveats
+
+The runner loads the supplied 1,094-row Person 1 CSV without editing it. The scheduler consumes `bilstm_predicted_cpu` and `bilstm_predicted_overload`; `actual_cpu` is kept for post-hoc diagnostics and is not passed into the fitness objective. The input lacks a calibrated overload probability, so the current adapter uses the binary predicted overload label as a 0/1 risk score and writes this limitation into the validation report.
+
+Rows are partitioned in original order into non-overlapping horizons of 10 observations. Because the handoff has time-series observations but no independent task IDs or task metadata, each row is a synthetic workload/task abstraction for algorithm testing. These results are not a validated physical cloud simulation. The timestamp values look like Unix seconds despite the `timestamp_ms` header; confirm with Person 1.
+
+BFD, GWO, HHO, sequential HHO→GWO, PSO and GA receive identical horizon data, configured VMs, objective terms, and trial seeds. Ten seeds are used in the full run. The metaheuristics use a strict cap of 300 objective-function calls per horizon and seed. Repeated assignments are still counted as calls, so the search methods consume the same budget; HHO–GWO splits its total budget between the HHO and GWO stages. BFD is a deterministic constructive baseline and requires one objective evaluation rather than consuming the search budget. The configured iteration count is a maximum; a budget-exhausted search may finish partway through an iteration.
+
+All energy, SLA, makespan, utilization, and placement metrics are proxy measurements based on configured synthetic VM parameters. Validate the workload interpretation and use Person 3's CloudSim Plus simulator before treating these as real cloud performance results. Person 1's prediction output is kept unchanged; the known persistence-baseline advantage must be reported honestly.
